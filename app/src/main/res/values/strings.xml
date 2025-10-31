@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Redlights</string>
+    <string name="permission_location_rationale">Redlights needs location access to track your bike rides and detect stops at traffic lights.</string>
+    <string name="permission_location_denied">Location permission is required to track your rides. Please grant permission in Settings.</string>
+</resources>
