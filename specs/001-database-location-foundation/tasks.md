@@ -28,14 +28,14 @@ This is an Android mobile app using Clean Architecture:
 
 **Purpose**: Project initialization and dependency configuration
 
-- [ ] T001 Add Room 2.6+ dependency to app/build.gradle.kts
-- [ ] T002 Add Hilt 2.48+ dependency and annotation processing to app/build.gradle.kts
-- [ ] T003 Add Google Play Services Location 21.0+ dependency to app/build.gradle.kts
-- [ ] T004 Add Kotlinx Coroutines 1.7+ dependency to app/build.gradle.kts
-- [ ] T005 Add @HiltAndroidApp annotation to application class
-- [ ] T006 Configure Hilt compilation in app/build.gradle.kts (kapt plugin)
-- [ ] T007 Add required permissions to AndroidManifest.xml (ACCESS_FINE_LOCATION, FOREGROUND_SERVICE, POST_NOTIFICATIONS)
-- [ ] T008 Create package structure per plan.md (domain/, data/, di/ directories)
+- [X] T001 Add Room 2.6+ dependency to app/build.gradle.kts
+- [X] T002 Add Hilt 2.48+ dependency and annotation processing to app/build.gradle.kts
+- [X] T003 Add Google Play Services Location 21.0+ dependency to app/build.gradle.kts
+- [X] T004 Add Kotlinx Coroutines 1.7+ dependency to app/build.gradle.kts
+- [X] T005 Add @HiltAndroidApp annotation to application class
+- [X] T006 Configure Hilt compilation in app/build.gradle.kts (kapt plugin)
+- [X] T007 Add required permissions to AndroidManifest.xml (ACCESS_FINE_LOCATION, FOREGROUND_SERVICE, POST_NOTIFICATIONS)
+- [X] T008 Create package structure per plan.md (domain/, data/, di/ directories)
 
 **Checkpoint**: Build succeeds with all dependencies resolved
 
@@ -49,10 +49,10 @@ This is an Android mobile app using Clean Architecture:
 
 ### Domain Models
 
-- [ ] T009 [P] [Domain] Create Ride.kt model in app/src/main/java/com/tiarkaerell/redlights/domain/model/Ride.kt with all fields per data-model.md
-- [ ] T010 [P] [Domain] Create RidePoint.kt model in app/src/main/java/com/tiarkaerell/redlights/domain/model/RidePoint.kt with all fields per data-model.md
-- [ ] T011 [P] [Domain] Create Stop.kt model in app/src/main/java/com/tiarkaerell/redlights/domain/model/Stop.kt with all fields per data-model.md
-- [ ] T012 [P] [Domain] Create StopCluster.kt model in app/src/main/java/com/tiarkaerell/redlights/domain/model/StopCluster.kt with all fields per data-model.md
+- [X] T009 [P] [Domain] Create Ride.kt model in app/src/main/java/com/tiarkaerell/redlights/domain/model/Ride.kt with all fields per data-model.md
+- [X] T010 [P] [Domain] Create RidePoint.kt model in app/src/main/java/com/tiarkaerell/redlights/domain/model/RidePoint.kt with all fields per data-model.md
+- [X] T011 [P] [Domain] Create Stop.kt model in app/src/main/java/com/tiarkaerell/redlights/domain/model/Stop.kt with all fields per data-model.md
+- [X] T012 [P] [Domain] Create StopCluster.kt model in app/src/main/java/com/tiarkaerell/redlights/domain/model/StopCluster.kt with all fields per data-model.md
 
 **Checkpoint**: Domain models compile with no Android dependencies
 
