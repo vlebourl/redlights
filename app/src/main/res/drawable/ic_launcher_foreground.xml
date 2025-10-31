@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:translateX="16.2"
+        android:translateY="16.2">
+        <!-- Traffic light body -->
+        <path
+            android:fillColor="#212121"
+            android:pathData="M35,20 L65,20 L68,90 L32,90 Z" />
+        <!-- Red light (illuminated) -->
+        <path
+            android:fillColor="#FF1744"
+            android:pathData="M50,35 m-12,0 a12,12 0 1,1 24,0 a12,12 0 1,1 -24,0" />
+        <!-- Yellow light (dim) -->
+        <path
+            android:fillColor="#4A4A4A"
+            android:pathData="M50,55 m-10,0 a10,10 0 1,1 20,0 a10,10 0 1,1 -20,0" />
+        <!-- Green light (dim) -->
+        <path
+            android:fillColor="#4A4A4A"
+            android:pathData="M50,75 m-10,0 a10,10 0 1,1 20,0 a10,10 0 1,1 -20,0" />
+    </group>
+</vector>

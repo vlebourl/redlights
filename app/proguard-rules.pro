@@ -70,9 +70,30 @@
 -dontwarn org.maplibre.**
 
 # OkHttp optional security providers - these are not required dependencies
+# Generic rules
 -dontwarn org.bouncycastle.**
 -dontwarn org.conscrypt.**
 -dontwarn org.openjsse.**
+
+# R8-generated specific class rules
+-dontwarn org.bouncycastle.jsse.BCSSLParameters
+-dontwarn org.bouncycastle.jsse.BCSSLSocket
+-dontwarn org.bouncycastle.jsse.provider.BouncyCastleJsseProvider
+-dontwarn org.conscrypt.Conscrypt$Version
+-dontwarn org.conscrypt.Conscrypt
+-dontwarn org.conscrypt.ConscryptHostnameVerifier
+-dontwarn org.openjsse.javax.net.ssl.SSLParameters
+-dontwarn org.openjsse.javax.net.ssl.SSLSocket
+-dontwarn org.openjsse.net.ssl.OpenJSSE
+
+# OkHttp Platform - Keep platform-specific implementations
+-keep class okhttp3.internal.platform.** { *; }
+-dontwarn okhttp3.internal.platform.**
+
+# R8 specific rules for missing optional dependencies
+-dontnote org.bouncycastle.**
+-dontnote org.conscrypt.**
+-dontnote org.openjsse.**
 
 # Google Play Services Location
 -keep class com.google.android.gms.location.** { *; }

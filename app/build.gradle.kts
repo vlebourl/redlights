@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -6,9 +9,47 @@ plugins {
     alias(libs.plugins.hilt.android)
 }
 
+// Load keystore properties from keystore.properties file
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+val keystoreProperties = Properties()
+
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+}
+
 android {
     namespace = "com.tiarkaerell.redlights"
     compileSdk = 36
+
+    signingConfigs {
+        create("release") {
+            // Secure password loading: prioritizes environment variables over file
+            // 1st priority: Environment variable
+            // 2nd priority: keystore.properties (if not blank)
+            // 3rd priority: Default/empty
+
+            val propKeyAlias = keystoreProperties.getProperty("keyAlias")?.takeIf { it.isNotBlank() }
+            val propKeyPassword = keystoreProperties.getProperty("keyPassword")?.takeIf { it.isNotBlank() }
+            val propStoreFile = keystoreProperties.getProperty("storeFile")?.takeIf { it.isNotBlank() }
+            val propStorePassword = keystoreProperties.getProperty("storePassword")?.takeIf { it.isNotBlank() }
+
+            keyAlias = System.getenv("REDLIGHTS_KEYSTORE_ALIAS")
+                ?: propKeyAlias
+                ?: "redlights-release"
+
+            keyPassword = System.getenv("REDLIGHTS_KEYSTORE_PASSWORD")
+                ?: propKeyPassword
+                ?: ""
+
+            storeFile = rootProject.file(System.getenv("REDLIGHTS_KEYSTORE_FILE")
+                ?: propStoreFile
+                ?: "app/redlights-production.jks")
+
+            storePassword = System.getenv("REDLIGHTS_KEYSTORE_PASSWORD")
+                ?: propStorePassword
+                ?: ""
+        }
+    }
 
     defaultConfig {
         applicationId = "com.tiarkaerell.redlights"
@@ -31,11 +72,13 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
         debug {
             isMinifyEnabled = false
             applicationIdSuffix = ".debug"
             versionNameSuffix = "-debug"
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {

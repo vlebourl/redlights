@@ -90,6 +90,20 @@ lint/tmp/
 # Keystore files
 *.jks
 *.keystore
+*.p12
+*.key
+*.pem
+
+# Secrets and credentials
+keystore.properties
+secrets.properties
+signing.properties
+client_secret*.json
+*.jks.backup
+
+# Local signing configuration (contains passwords and keys)
+app/keystore.properties
+app/signing.properties
 
 # MacOS
 .DS_Store
