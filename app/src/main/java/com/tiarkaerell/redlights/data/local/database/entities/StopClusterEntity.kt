@@ -88,8 +88,10 @@ data class StopClusterEntity(
         /**
          * Parse JSON array string to List<Long>
          * Example: "[1,5,12,23]" → [1, 5, 12, 23]
+         *
+         * Public for use by StopClusterRepository
          */
-        private fun parseStopIds(json: String): List<Long> {
+        fun parseStopIds(json: String): List<Long> {
             return try {
                 val jsonArray = JSONArray(json)
                 List(jsonArray.length()) { i -> jsonArray.getLong(i) }
@@ -101,8 +103,10 @@ data class StopClusterEntity(
         /**
          * Serialize List<Long> to JSON array string
          * Example: [1, 5, 12, 23] → "[1,5,12,23]"
+         *
+         * Public for use by StopClusterRepository
          */
-        private fun serializeStopIds(stopIds: List<Long>): String {
+        fun serializeStopIds(stopIds: List<Long>): String {
             val jsonArray = JSONArray()
             stopIds.forEach { jsonArray.put(it) }
             return jsonArray.toString()

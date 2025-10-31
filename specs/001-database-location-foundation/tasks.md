@@ -122,30 +122,30 @@ This is an Android mobile app using Clean Architecture:
 
 ### Repository Implementations
 
-- [ ] T040 [Data] Create RideRepositoryImpl.kt in app/src/main/java/com/tiarkaerell/redlights/data/repository/RideRepositoryImpl.kt implementing RideRepository interface
-- [ ] T041 [Data] Implement createRide() in RideRepositoryImpl with entity-to-model mapping
-- [ ] T042 [Data] Implement completeRide() in RideRepositoryImpl with metrics finalization
-- [ ] T043 [Data] Implement getRideById() and getActiveRide() in RideRepositoryImpl
-- [ ] T044 [Data] Implement getAllRides() with Flow and pagination in RideRepositoryImpl
-- [ ] T045 [Data] Implement deleteRide() with cascade deletion in RideRepositoryImpl
-- [ ] T046 [Data] Implement deleteIncompleteRides() for crash recovery in RideRepositoryImpl
-- [ ] T047 [Data] Implement addRidePoint(), getRidePoints(), getLastRidePoint() in RideRepositoryImpl
-- [ ] T048 [Data] Implement addStop(), getStops(), getNextStopSequence() in RideRepositoryImpl
-- [ ] T049 [Data] Implement updateRideMetrics() in RideRepositoryImpl
-- [ ] T050 [Data] Implement getTotalStorageUsed() and getRideCount() in RideRepositoryImpl
+- [X] T040 [Data] Create RideRepositoryImpl.kt in app/src/main/java/com/tiarkaerell/redlights/data/repository/RideRepositoryImpl.kt implementing RideRepository interface
+- [X] T041 [Data] Implement createRide() in RideRepositoryImpl with entity-to-model mapping
+- [X] T042 [Data] Implement completeRide() in RideRepositoryImpl with metrics finalization
+- [X] T043 [Data] Implement getRideById() and getActiveRide() in RideRepositoryImpl
+- [X] T044 [Data] Implement getAllRides() with Flow and pagination in RideRepositoryImpl
+- [X] T045 [Data] Implement deleteRide() with cascade deletion in RideRepositoryImpl
+- [X] T046 [Data] Implement deleteIncompleteRides() for crash recovery in RideRepositoryImpl
+- [X] T047 [Data] Implement addRidePoint(), getRidePoints(), getLastRidePoint() in RideRepositoryImpl
+- [X] T048 [Data] Implement addStop(), getStops(), getNextStopSequence() in RideRepositoryImpl
+- [X] T049 [Data] Implement updateRideMetrics() in RideRepositoryImpl
+- [X] T050 [Data] Implement getTotalStorageUsed() and getRideCount() in RideRepositoryImpl
 
-- [ ] T051 [Data] Create LocationRepositoryImpl.kt in app/src/main/java/com/tiarkaerell/redlights/data/repository/LocationRepositoryImpl.kt implementing LocationRepository interface
-- [ ] T052 [Data] Delegate all location operations to injected LocationTracker in LocationRepositoryImpl
+- [X] T051 [Data] Create LocationRepositoryImpl.kt in app/src/main/java/com/tiarkaerell/redlights/data/repository/LocationRepositoryImpl.kt implementing LocationRepository interface
+- [X] T052 [Data] Delegate all location operations to injected LocationTracker in LocationRepositoryImpl
 
-- [ ] T053 [Data] Create StopClusterRepositoryImpl.kt in app/src/main/java/com/tiarkaerell/redlights/data/repository/StopClusterRepositoryImpl.kt implementing StopClusterRepository interface
-- [ ] T054 [Data] Implement processRideStops() with DBSCAN-inspired clustering algorithm in StopClusterRepositoryImpl
-- [ ] T055 [Data] Implement createCluster() and recalculateCluster() with centroid calculation in StopClusterRepositoryImpl
-- [ ] T056 [Data] Implement findClustersNear() with geospatial radius query in StopClusterRepositoryImpl
-- [ ] T057 [Data] Implement getClusterById() and getAllClusters() with Flow in StopClusterRepositoryImpl
-- [ ] T058 [Data] Implement getClustersWithMinStops() and getClustersWithLongDuration() in StopClusterRepositoryImpl
-- [ ] T059 [Data] Implement analytics methods (getClusterCount, getMostFrequentCluster, getLongestWaitCluster) in StopClusterRepositoryImpl
-- [ ] T060 [Data] Implement getClusterStops() in StopClusterRepositoryImpl
-- [ ] T061 [Data] Implement cluster maintenance operations (deleteCluster, rebuildAllClusters, deleteStaleClusters) in StopClusterRepositoryImpl
+- [X] T053 [Data] Create StopClusterRepositoryImpl.kt in app/src/main/java/com/tiarkaerell/redlights/data/repository/StopClusterRepositoryImpl.kt implementing StopClusterRepository interface
+- [X] T054 [Data] Implement processRideStops() with DBSCAN-inspired clustering algorithm in StopClusterRepositoryImpl
+- [X] T055 [Data] Implement createCluster() and recalculateCluster() with centroid calculation in StopClusterRepositoryImpl
+- [X] T056 [Data] Implement findClustersNear() with geospatial radius query in StopClusterRepositoryImpl
+- [X] T057 [Data] Implement getClusterById() and getAllClusters() with Flow in StopClusterRepositoryImpl
+- [X] T058 [Data] Implement getClustersWithMinStops() and getClustersWithLongDuration() in StopClusterRepositoryImpl
+- [X] T059 [Data] Implement analytics methods (getClusterCount, getMostFrequentCluster, getLongestWaitCluster) in StopClusterRepositoryImpl
+- [X] T060 [Data] Implement getClusterStops() in StopClusterRepositoryImpl
+- [X] T061 [Data] Implement cluster maintenance operations (deleteCluster, rebuildAllClusters, deleteStaleClusters) in StopClusterRepositoryImpl
 
 **Checkpoint**: All repositories compile and can be instantiated with mock DAOs
 
