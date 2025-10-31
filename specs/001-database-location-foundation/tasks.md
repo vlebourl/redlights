@@ -91,26 +91,26 @@ This is an Android mobile app using Clean Architecture:
 
 ### Location Tracking Core
 
-- [ ] T023 [Data] Create LocationTracker.kt interface in app/src/main/java/com/tiarkaerell/redlights/data/local/location/LocationTracker.kt defining location tracking contract
-- [ ] T024 [Data] Implement DefaultLocationTracker in app/src/main/java/com/tiarkaerell/redlights/data/local/location/DefaultLocationTracker.kt with FusedLocationProviderClient
-- [ ] T025 [Data] Add permission checking methods (hasLocationPermission, isLocationEnabled) to DefaultLocationTracker
-- [ ] T026 [Data] Implement startLocationUpdates() in DefaultLocationTracker with LocationRequest (1Hz, PRIORITY_HIGH_ACCURACY)
-- [ ] T027 [Data] Implement accuracy filtering (reject >50m) in DefaultLocationTracker location callback
-- [ ] T028 [Data] Implement stopLocationUpdates() in DefaultLocationTracker with proper cleanup
-- [ ] T029 [Data] Add Haversine distance calculation method to DefaultLocationTracker
-- [ ] T030 [Data] Add bearing calculation method to DefaultLocationTracker
+- [X] T023 [Data] Create LocationTracker.kt interface in app/src/main/java/com/tiarkaerell/redlights/data/local/location/LocationTracker.kt defining location tracking contract
+- [X] T024 [Data] Implement DefaultLocationTracker in app/src/main/java/com/tiarkaerell/redlights/data/local/location/DefaultLocationTracker.kt with FusedLocationProviderClient
+- [X] T025 [Data] Add permission checking methods (hasLocationPermission, isLocationEnabled) to DefaultLocationTracker
+- [X] T026 [Data] Implement startLocationUpdates() in DefaultLocationTracker with LocationRequest (1Hz, PRIORITY_HIGH_ACCURACY)
+- [X] T027 [Data] Implement accuracy filtering (reject >50m) in DefaultLocationTracker location callback
+- [X] T028 [Data] Implement stopLocationUpdates() in DefaultLocationTracker with proper cleanup
+- [X] T029 [Data] Add Haversine distance calculation method to DefaultLocationTracker
+- [X] T030 [Data] Add bearing calculation method to DefaultLocationTracker
 
 ### Foreground Service
 
-- [ ] T031 [Data] Create LocationTrackerService.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/location/LocationTrackerService.kt extending Service with @AndroidEntryPoint
-- [ ] T032 [Data] Implement notification channel creation (IMPORTANCE_LOW) in LocationTrackerService
-- [ ] T033 [Data] Implement foreground notification builder (persistent, with Stop Ride action) in LocationTrackerService
-- [ ] T034 [Data] Implement onStartCommand with START_STICKY and startForeground() in LocationTrackerService
-- [ ] T035 [Data] Integrate DefaultLocationTracker into LocationTrackerService for continuous tracking
-- [ ] T036 [Data] Implement stop detection state machine (MOVING → POTENTIAL_STOP → CONFIRMED_STOP) in LocationTrackerService
-- [ ] T037 [Data] Implement smart sampling logic (speed/bearing/time thresholds) in LocationTrackerService
-- [ ] T038 [Data] Implement onDestroy with proper location cleanup in LocationTrackerService
-- [ ] T039 [Data] Register LocationTrackerService in AndroidManifest.xml with foregroundServiceType="location"
+- [X] T031 [Data] Create LocationTrackerService.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/location/LocationTrackerService.kt extending Service with @AndroidEntryPoint
+- [X] T032 [Data] Implement notification channel creation (IMPORTANCE_LOW) in LocationTrackerService
+- [X] T033 [Data] Implement foreground notification builder (persistent, with Stop Ride action) in LocationTrackerService
+- [X] T034 [Data] Implement onStartCommand with START_STICKY and startForeground() in LocationTrackerService
+- [X] T035 [Data] Integrate DefaultLocationTracker into LocationTrackerService for continuous tracking
+- [X] T036 [Data] Implement stop detection state machine (MOVING → POTENTIAL_STOP → CONFIRMED_STOP) in LocationTrackerService
+- [X] T037 [Data] Implement smart sampling logic (speed/bearing/time thresholds) in LocationTrackerService
+- [X] T038 [Data] Implement onDestroy with proper location cleanup in LocationTrackerService
+- [X] T039 [Data] Register LocationTrackerService in AndroidManifest.xml with foregroundServiceType="location"
 
 **Checkpoint**: LocationTrackerService can start, show notification, and receive location updates
 
