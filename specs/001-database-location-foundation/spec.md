@@ -3,8 +3,8 @@
 **Status**: Draft
 **Created**: 2025-10-31
 **Last Updated**: 2025-10-31
-**Feature ID**: 1
-**Branch**: 1-database-location-foundation
+**Feature ID**: 001
+**Branch**: 001-database-location-foundation
 **Owner**: Development Team
 
 ---

@@ -3,6 +3,7 @@
 **Purpose**: Validate specification completeness and quality before proceeding to planning
 **Created**: 2025-10-31
 **Feature**: [spec.md](../spec.md)
+**Branch**: 001-database-location-foundation
 
 ---
 
