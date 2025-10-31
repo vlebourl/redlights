@@ -157,19 +157,19 @@ This is an Android mobile app using Clean Architecture:
 
 ### Hilt Modules
 
-- [ ] T062 [P] [DI] Create DatabaseModule.kt in app/src/main/java/com/tiarkaerell/redlights/di/DatabaseModule.kt with @Module and @InstallIn(SingletonComponent::class)
-- [ ] T063 [DI] Provide RedlightsDatabase instance in DatabaseModule (@Singleton scope)
-- [ ] T064 [P] [DI] Provide RideDao from database in DatabaseModule
-- [ ] T065 [P] [DI] Provide RidePointDao from database in DatabaseModule
-- [ ] T066 [P] [DI] Provide StopDao from database in DatabaseModule
-- [ ] T067 [P] [DI] Provide StopClusterDao from database in DatabaseModule
-- [ ] T068 [DI] Bind RideRepositoryImpl to RideRepository interface in DatabaseModule
-- [ ] T069 [DI] Bind StopClusterRepositoryImpl to StopClusterRepository interface in DatabaseModule
+- [X] T062 [P] [DI] Create DatabaseModule.kt in app/src/main/java/com/tiarkaerell/redlights/di/DatabaseModule.kt with @Module and @InstallIn(SingletonComponent::class)
+- [X] T063 [DI] Provide RedlightsDatabase instance in DatabaseModule (@Singleton scope)
+- [X] T064 [P] [DI] Provide RideDao from database in DatabaseModule
+- [X] T065 [P] [DI] Provide RidePointDao from database in DatabaseModule
+- [X] T066 [P] [DI] Provide StopDao from database in DatabaseModule
+- [X] T067 [P] [DI] Provide StopClusterDao from database in DatabaseModule
+- [X] T068 [DI] Bind RideRepositoryImpl to RideRepository interface in DatabaseModule
+- [X] T069 [DI] Bind StopClusterRepositoryImpl to StopClusterRepository interface in DatabaseModule
 
-- [ ] T070 [P] [DI] Create LocationModule.kt in app/src/main/java/com/tiarkaerell/redlights/di/LocationModule.kt with @Module and @InstallIn(SingletonComponent::class)
-- [ ] T071 [DI] Provide FusedLocationProviderClient in LocationModule using context
-- [ ] T072 [DI] Bind DefaultLocationTracker to LocationTracker interface in LocationModule
-- [ ] T073 [DI] Bind LocationRepositoryImpl to LocationRepository interface in LocationModule
+- [X] T070 [P] [DI] Create LocationModule.kt in app/src/main/java/com/tiarkaerell/redlights/di/LocationModule.kt with @Module and @InstallIn(SingletonComponent::class)
+- [X] T071 [DI] Provide FusedLocationProviderClient in LocationModule using context
+- [X] T072 [DI] Bind DefaultLocationTracker to LocationTracker interface in LocationModule
+- [X] T073 [DI] Bind LocationRepositoryImpl to LocationRepository interface in LocationModule
 
 **Checkpoint**: App builds with Hilt and all dependencies inject correctly
 
