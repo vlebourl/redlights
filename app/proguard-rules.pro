@@ -69,6 +69,11 @@
 -keep interface org.maplibre.** { *; }
 -dontwarn org.maplibre.**
 
+# OkHttp optional security providers - these are not required dependencies
+-dontwarn org.bouncycastle.**
+-dontwarn org.conscrypt.**
+-dontwarn org.openjsse.**
+
 # Google Play Services Location
 -keep class com.google.android.gms.location.** { *; }
 -dontwarn com.google.android.gms.**

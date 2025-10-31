@@ -23,6 +23,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Suppress("FunctionNaming")
 @Composable
 fun RedlightsApp() {
     Surface(
