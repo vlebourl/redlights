@@ -64,22 +64,22 @@ This is an Android mobile app using Clean Architecture:
 
 ### Database Entities
 
-- [ ] T013 [P] [Data] Create RideEntity.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/entities/RideEntity.kt with @Entity annotation, all fields, and toDomainModel() mapping
-- [ ] T014 [P] [Data] Create RidePointEntity.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/entities/RidePointEntity.kt with @Entity annotation, foreign key to rides table, indexes
-- [ ] T015 [P] [Data] Create StopEntity.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/entities/StopEntity.kt with @Entity annotation, foreign key to rides table, geospatial indexes
-- [ ] T016 [P] [Data] Create StopClusterEntity.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/entities/StopClusterEntity.kt with @Entity annotation and JSON stopIds field
+- [X] T013 [P] [Data] Create RideEntity.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/entities/RideEntity.kt with @Entity annotation, all fields, and toDomainModel() mapping
+- [X] T014 [P] [Data] Create RidePointEntity.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/entities/RidePointEntity.kt with @Entity annotation, foreign key to rides table, indexes
+- [X] T015 [P] [Data] Create StopEntity.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/entities/StopEntity.kt with @Entity annotation, foreign key to rides table, geospatial indexes
+- [X] T016 [P] [Data] Create StopClusterEntity.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/entities/StopClusterEntity.kt with @Entity annotation and JSON stopIds field
 
 ### Data Access Objects (DAOs)
 
-- [ ] T017 [P] [Data] Create RideDao.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/dao/RideDao.kt with CRUD operations per RideRepository contract
-- [ ] T018 [P] [Data] Create RidePointDao.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/dao/RidePointDao.kt with insert, query by rideId, and get last point operations
-- [ ] T019 [P] [Data] Create StopDao.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/dao/StopDao.kt with insert, query by rideId, and geospatial query operations
-- [ ] T020 [P] [Data] Create StopClusterDao.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/dao/StopClusterDao.kt with cluster CRUD, geospatial queries, and analytics operations
+- [X] T017 [P] [Data] Create RideDao.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/dao/RideDao.kt with CRUD operations per RideRepository contract
+- [X] T018 [P] [Data] Create RidePointDao.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/dao/RidePointDao.kt with insert, query by rideId, and get last point operations
+- [X] T019 [P] [Data] Create StopDao.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/dao/StopDao.kt with insert, query by rideId, and geospatial query operations
+- [X] T020 [P] [Data] Create StopClusterDao.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/dao/StopClusterDao.kt with cluster CRUD, geospatial queries, and analytics operations
 
 ### Database Configuration
 
-- [ ] T021 [Data] Create RedlightsDatabase.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/RedlightsDatabase.kt with @Database annotation, version 1, all entities, and DAO getters
-- [ ] T022 [Data] Add database builder configuration in RedlightsDatabase.kt (fallbackToDestructiveMigration for v1.0, enableMultiInstanceInvalidation, setJournalMode WAL)
+- [X] T021 [Data] Create RedlightsDatabase.kt in app/src/main/java/com/tiarkaerell/redlights/data/local/database/RedlightsDatabase.kt with @Database annotation, version 1, all entities, and DAO getters
+- [X] T022 [Data] Add database builder configuration in RedlightsDatabase.kt (fallbackToDestructiveMigration for v1.0, enableMultiInstanceInvalidation, setJournalMode WAL)
 
 **Checkpoint**: Database compiles and can be instantiated (test with simple insert/query)
 
